@@ -1,0 +1,60 @@
+/* ---------------------------- */
+/* service
+/* ---------------------------- */
+.service-list{
+    display: flex;
+
+    @include mq{
+        display: block;
+        margin-bottom: 40px;
+    }
+}
+
+.service-item{
+    width: 33.3%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    a{
+        display: block;
+        width: 100%;
+        text-align: center;
+        color: $color-white;
+        line-height: 320px;
+        font-size: 4rem;
+        font-weight: bold;
+        font-style: italic;
+        transition: .3s;
+
+        @include mq{
+            line-height: 250px;
+        }
+
+        &:hover{
+            background-color: rgba(40, 47, 53, .7);
+            transition: .3s;
+        }
+    }
+
+    &.service_1{
+        background-image: url(../images/service-img01@2x.jpg);
+    }
+
+    &.service_2{
+        background-image: url(../images/service-img02@2x.jpg);
+    }
+
+    &.service_3{
+        background-image: url(../images/sevice-img03@2x.jpg);
+    }
+
+    @include mq{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+}
+
+
+

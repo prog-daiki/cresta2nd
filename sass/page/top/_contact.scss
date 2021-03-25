@@ -1,0 +1,16 @@
+/* ---------------------------- */
+/* contact
+/* ---------------------------- */
+#contact{
+    background-image: url(../images/contact-bgi@2x.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contact-text{
+    text-align: center;
+    color: $color-white;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}

@@ -1,0 +1,154 @@
+/*------------*/
+// header
+/*------------*/
+.header{
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    transition: .3s;
+
+
+    a{
+        font-weight: bold;
+        font-style: italic;
+
+        &:hover{
+            opacity: .7;
+            transition: .3s;
+        }
+    }
+}
+
+.header-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    height: 74px;
+    padding: 0 120px;
+
+    @include mq{
+        padding: 0 4vw;
+    }
+
+
+}
+
+#global-nav {
+    position: static;
+    top: -30px;
+    transition: all 0.3s ease 0s;
+}
+
+#global-nav.m_fixed {
+    left: 0;
+    position: fixed;
+    top: 0;
+    background-color: $color-font;
+    transition: all .3s ease 0s;
+}
+
+.header-nav-wrapper{
+    @include mq{
+        display: none;
+        width: 100vh;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+    }
+}
+
+.header-nav{
+    @include mq{
+        width: 100%;
+        height: 100vh;
+        background-color: $color-font;
+        position: fixed;
+    }
+}
+
+.header-logo{
+    font-size: 2.6rem;
+}
+
+.header-nav-list{
+    display: flex;
+
+    @include mq{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+.header-nav-item:not(:last-child){
+    margin-right: 30px;
+
+    @include mq{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+/*--------------------*/
+// ハンバーガーメニュー
+/*--------------------*/
+
+.burger-btn{
+    display: none;
+
+    @include mq{
+        display: block;
+        width: 39px;
+        height: 39px;
+        position: relative;
+        z-index: 3;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    &.close{
+        .bar_top{
+            transform: translate(-50%,10px) rotate(45deg);
+            transition: .3s;
+        }
+        .bar_mid{
+            opacity: 0;
+            transition: opacity .3s;
+        }
+        .bar_bottom{
+            transform: translate(-50%,-10px) rotate(-45deg);
+            transition: .3s;
+        }
+    }
+
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    left: 50%;
+    transform: translate(-50%);
+
+&_top{
+        top: 8px;
+}
+
+&_mid{
+        top: 50%;
+        transform: translate(-50%, -50%);
+}
+
+&_bottom{
+        bottom: 8px;
+    }
+}

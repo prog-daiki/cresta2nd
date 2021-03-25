@@ -1,0 +1,39 @@
+/* ---------------------------- */
+/* works
+/* ---------------------------- */
+#works{
+    background-image: url(../images/works-bgi@2x.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.works-card-list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+
+    @include mq{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.works-card-item{
+    width: 32%;
+    background-color: $color-white;
+
+    @include mq{
+        width: 320px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    a{
+        color: $color-font;
+    }
+}
+
+.works-text{
+    padding: 25px 20px;
+}

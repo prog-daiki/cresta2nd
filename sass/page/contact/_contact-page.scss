@@ -1,0 +1,129 @@
+ /* ---------------------------- */
+    /* contact-fv
+ /* ---------------------------- */
+.contact-fv{
+    height: 453px;
+    position: relative;
+    background-image: url(../images/contact-page-bgi@2x.jpg);
+}
+
+.page-title{
+    font-size: 6rem;
+    color: $color-white;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    padding-top: 186px;
+
+    @include mq{
+        font-size: 3rem;
+        margin-bottom: 40px;
+    }
+}
+
+/* ---------------------------- */
+/* form
+/* ---------------------------- */
+input,textarea{
+    resize: none;
+    appearance: none;
+    outline: none;
+    border: 1px solid $color-font;
+}
+
+.form-wrapper{
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 100px 0 80px;
+
+    @include mq{
+        padding: 100px 4vw 80px;
+    }
+}
+
+
+.form-list{
+    margin: 0 auto 25px;
+}
+
+.checkbox-list{
+    display: flex;
+
+    @include mq{
+        display: block;
+    }
+}
+
+.checkbox-item{
+    margin-right: 20px;
+}
+
+.checkbox{
+    border: #282f35 1px solid;
+    height: 10px;
+    width: 10px;
+    margin-right: 10px;
+}
+
+.checkbox-item label,
+.checkbox{
+    cursor: pointer;
+}
+
+
+.checkbox:checked{
+    background-color: #333;
+}
+
+
+.form-part{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+label{
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-text{
+    padding: 0 8px;
+    line-height: 30px;
+}
+
+.textarea{
+    padding: 0 8px;
+    line-height: 30px;
+}
+
+textarea{
+    resize: none;
+    height: 171px;
+}
+
+.form-btn{
+    display: block;
+    width: 235px;
+    line-height: 60px;
+    margin: 0 auto ;
+    background-color: $color-btn;
+    box-shadow: 0 0 6px $color-shadow;
+    border-radius: 30px;
+    text-align: center;
+    color: $color-font;
+    font-weight: bold;
+    transition: .3s;
+    outline: none;
+    appearance: none;
+    border: none;
+
+    &:hover{
+        background-color: $color-font;
+        color: $color-btn;
+    }
+}
+
+.last-form{
+    margin-bottom: 80px;
+}

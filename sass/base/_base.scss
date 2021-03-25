@@ -1,0 +1,137 @@
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    color: $color-font;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    letter-spacing: 0.05em;
+    font-family: $font-en,$font-jp;
+}
+
+.noscroll{
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+a{
+    text-decoration: none;
+    color: $color-link;
+}
+/*--------------*/
+// カスタマイズ
+/*--------------*/
+.section-wrapper{
+    padding: 100px 0 80px;
+
+    @include mq{
+        padding: 100px 0 40px;
+    }
+}
+
+
+.section-title{
+    color: $color-title;
+    font-size: 6rem;
+    margin: 0 auto 80px;
+    max-width: 1000px;
+    font-style: italic;
+    padding: 0 20px;
+
+    @include mq{
+        font-size: 3rem;
+        margin-bottom: 50px;
+        padding: 0 4vw;
+    }
+}
+
+.section-title::after{
+    content: '';
+    display: inline-block;
+    background-color: $color-title;
+    width: 200px;
+    height: 5px;
+    margin-left: 30px;
+    vertical-align: middle;
+
+    @include mq{
+        width: 90px;
+    }
+}
+
+.section-inner{
+    max-width: 1000px;
+    margin: 0 auto;
+    // padding: 0 50px;
+    @include mq{
+        padding: 0 4vw;
+    }
+}
+
+.section-bottom{
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 9rem;
+    opacity: 0.05;
+    font-weight: bold;
+
+    @include mq{
+        font-size: 4rem;
+        padding: 0 4vw;
+    }
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-white{
+    color: $color-white;
+}
+
+.section-title.text-white::after{
+    background-color: #fff;
+}
+
+.link-btn{
+    display: block;
+    width: 235px;
+    line-height: 60px;
+    margin: 0 auto 70px;
+    background-color: $color-btn;
+    box-shadow: 0 0 6px $color-shadow;
+    text-align: center;
+    color: $color-font;
+    font-weight: bold;
+    transition: .3s;
+    border-radius: 30px;
+
+    &:hover{
+        background-color: $color-font;
+        color: $color-btn;
+        transition: .3s;
+    }
+}
+
+.sp-br{
+    display: none;
+
+    @include mq{
+        display: block;
+    }
+}
+
+.pc-br{
+    @include mq{
+        display: none;
+    }
+}
